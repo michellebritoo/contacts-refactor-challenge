@@ -4,7 +4,6 @@ import com.contacts.desafio.android.data.UsersRepository
 import com.contacts.desafio.android.data.local.entity.UserEntity
 import com.contacts.desafio.android.domain.models.Result
 import kotlinx.coroutines.flow.Flow
-
 import kotlinx.coroutines.flow.flow
 
 class GetLocalUsersUseCase(private val repository: UsersRepository) {
