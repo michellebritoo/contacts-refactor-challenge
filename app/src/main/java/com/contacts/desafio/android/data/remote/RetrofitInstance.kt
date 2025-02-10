@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
 
-    private const val BASE_URL = "https://609a908e0f5a13001721b74e.mockapi.io/picpay/api/"
+    var baseUrl = "https://609a908e0f5a13001721b74e.mockapi.io/picpay/api/"
 
     private val okHttp: OkHttpClient by lazy {
         OkHttpClient.Builder()
@@ -17,7 +17,7 @@ object RetrofitInstance {
 
     val retrofitInstance: Retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(baseUrl)
             .client(okHttp)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
