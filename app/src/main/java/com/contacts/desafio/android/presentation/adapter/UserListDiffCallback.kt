@@ -1,14 +1,14 @@
-package com.contacts.desafio.android
+package com.contacts.desafio.android.presentation.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 
 class UserListDiffCallback(
-    private val oldList: List<User>,
-    private val newList: List<User>
+    private val oldList: List<UserUIModel>,
+    private val newList: List<UserUIModel>
 ) : DiffUtil.Callback() {
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition].username.equals(newList[newItemPosition].username)
+        return oldList[oldItemPosition].username == newList[newItemPosition].username
     }
 
     override fun getOldListSize(): Int {
